@@ -1,0 +1,157 @@
+D:\C# Practice\HRWebApp\HRWebApp\bin\HRWebApp.dll.config
+D:\C# Practice\HRWebApp\HRWebApp\bin\HRWebApp.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\HRWebApp.pdb
+D:\C# Practice\HRWebApp\HRWebApp\bin\Antlr3.Runtime.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\AspNet.ScriptManager.bootstrap.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\AspNet.ScriptManager.jQuery.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\EntityFramework.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\EntityFramework.SqlServer.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.FriendlyUrls.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Core.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Cookies.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Facebook.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Google.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.OAuth.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Twitter.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.ScriptManager.MSAjax.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.ScriptManager.WebForms.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Newtonsoft.Json.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\Owin.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\System.Web.Optimization.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\System.Web.Providers.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\WebGrease.dll
+D:\C# Practice\HRWebApp\HRWebApp\bin\System.Web.Optimization.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Antlr3.Runtime.pdb
+D:\C# Practice\HRWebApp\HRWebApp\bin\Newtonsoft.Json.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\EntityFramework.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\EntityFramework.SqlServer.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Core.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Facebook.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Cookies.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Google.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Twitter.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\C# Practice\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.OAuth.xml
+D:\C# Practice\HRWebApp\HRWebApp\obj\Debug\HRWebApp.csprojResolveAssemblyReference.cache
+D:\C# Practice\HRWebApp\HRWebApp\obj\Debug\HRWebApp.dll
+D:\C# Practice\HRWebApp\HRWebApp\obj\Debug\HRWebApp.pdb
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\HRWebApp.dll.config
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\HRWebApp.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\HRWebApp.pdb
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Antlr3.Runtime.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\AspNet.ScriptManager.bootstrap.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\EntityFramework.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.ScriptManager.MSAjax.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.ScriptManager.WebForms.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Newtonsoft.Json.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Owin.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\System.Web.Optimization.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\System.Web.Providers.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\WebGrease.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\System.Web.Optimization.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Antlr3.Runtime.pdb
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Newtonsoft.Json.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\EntityFramework.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\EntityFramework.SqlServer.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\obj\Debug\HRWebApp.csprojResolveAssemblyReference.cache
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\obj\Debug\HRWebApp.dll
+C:\Users\USER\Downloads\HRWebApp\HRWebApp\HRWebApp\obj\Debug\HRWebApp.pdb
+G:\Tahmid\Projects\HRWebApp\HRWebApp\obj\Debug\HRWebApp.csprojResolveAssemblyReference.cache
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\HRWebApp.dll.config
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\HRWebApp.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\HRWebApp.pdb
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Antlr3.Runtime.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\AspNet.ScriptManager.bootstrap.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\AspNet.ScriptManager.jQuery.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\BusinessLogic.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\EntityFramework.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\EntityFramework.SqlServer.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.FriendlyUrls.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Facebook.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Google.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.OAuth.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Twitter.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.ScriptManager.MSAjax.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.ScriptManager.WebForms.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Web.Infrastructure.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Newtonsoft.Json.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Owin.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\System.Web.Optimization.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\System.Web.Providers.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\WebGrease.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\DataAccess.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\BusinessLogic.pdb
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\System.Web.Optimization.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Antlr3.Runtime.pdb
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Newtonsoft.Json.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.FriendlyUrls.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\EntityFramework.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\EntityFramework.SqlServer.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Facebook.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Google.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.Twitter.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\Microsoft.Owin.Security.OAuth.xml
+G:\Tahmid\Projects\HRWebApp\HRWebApp\bin\DataAccess.pdb
+G:\Tahmid\Projects\HRWebApp\HRWebApp\obj\Debug\HRWebApp.dll
+G:\Tahmid\Projects\HRWebApp\HRWebApp\obj\Debug\HRWebApp.pdb
