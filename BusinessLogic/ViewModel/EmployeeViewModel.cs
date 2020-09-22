@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.ViewModel
 {
+    [Serializable]
     public class EmployeeViewModel
     {
         public long EmployeeID { get; set; }

@@ -50,8 +50,44 @@ namespace BusinessLogic
 
         }
 
+
+        public List<EmployeeViewModel> GetAllEmployee(int pageNo,int pageSize)
+        {
+            try
+            {
+                List<EmployeeViewModel> empVMList = new List<EmployeeViewModel>();
+                var employees = _oUnitOfWork.employeeRepository.GetAllPaging(pageNo,pageSize,x=>x.EmployeeID,x => x.IsActive == true);
+                if (employees.Count > 0)
+                {
+                    foreach (var employee in employees)
+                    {
+                        EmployeeViewModel empVM = new EmployeeViewModel();
+
+                        empVM.EmployeeID = employee.EmployeeID;
+                        empVM.Name = employee.Name;
+                        empVM.PhoneNo = employee.PhoneNo;
+                        empVM.Gender = employee.Gender;
+                        empVM.Address = employee.Address;
+                        empVM.EmployeeCode = employee.EmployeeCode;
+                        empVM.Email = employee.Email;
+
+
+                        empVMList.Add(empVM);
+                    }
+                }
+
+                return empVMList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
         public string InsertEmployee(EmployeeViewModel empVm)
         {
+
             try
             {
                 Employee objEmployee = new Employee();
@@ -62,7 +98,7 @@ namespace BusinessLogic
                 objEmployee.Address = empVm.Address;
                 objEmployee.Gender = empVm.Gender;
                 objEmployee.CreatedBy = "Admin";
-                objEmployee.CreatedeOn = DateTime.Now;
+                objEmployee.CreatedOn = DateTime.Now;
                 objEmployee.IsActive = true;
 
                 _oUnitOfWork.employeeRepository.Insert(objEmployee);
@@ -147,6 +183,87 @@ namespace BusinessLogic
 
                 throw ex;
             }
+        }
+
+        public int GetEmployeeCount()
+        {
+            return _oUnitOfWork.employeeRepository.GetCount(x=>x.IsActive==true);
+        }
+
+        public List<EmployeeViewModel> GetAllEmployeeByName(string name)
+        {
+            List<EmployeeViewModel> empVMList = new List<EmployeeViewModel>();
+            var employees = _oUnitOfWork.employeeRepository.GetAll(x=>x.Name.Contains(name));
+            if (employees.Count > 0)
+            {
+                foreach (var employee in employees)
+                {
+                    EmployeeViewModel empVM = new EmployeeViewModel();
+
+                    empVM.EmployeeID = employee.EmployeeID;
+                    empVM.Name = employee.Name;
+                    empVM.PhoneNo = employee.PhoneNo;
+                    empVM.Gender = employee.Gender;
+                    empVM.Address = employee.Address;
+                    empVM.EmployeeCode = employee.EmployeeCode;
+                    empVM.Email = employee.Email;
+
+
+                    empVMList.Add(empVM);
+                }
+            }
+
+            return empVMList;
+        }
+
+        public List<EmployeeViewModel> GetAllEmployeeByEmpCode(string empCode)
+        {
+            List<EmployeeViewModel> empVMList = new List<EmployeeViewModel>();
+            var employees = _oUnitOfWork.employeeRepository.GetAll(x=>x.EmployeeCode.Contains(empCode));
+            if (employees.Count > 0)
+            {
+                foreach (var employee in employees)
+                {
+                    EmployeeViewModel empVM = new EmployeeViewModel();
+
+                    empVM.EmployeeID = employee.EmployeeID;
+                    empVM.Name = employee.Name;
+                    empVM.PhoneNo = employee.PhoneNo;
+                    empVM.Gender = employee.Gender;
+                    empVM.Address = employee.Address;
+                    empVM.EmployeeCode = employee.EmployeeCode;
+                    empVM.Email = employee.Email;
+
+
+                    empVMList.Add(empVM);
+                }
+            }
+            return empVMList;
+        }
+
+        public List<EmployeeViewModel> GetAllEmployeeByPhoneNo(string phone)
+        {
+            List<EmployeeViewModel> empVMList = new List<EmployeeViewModel>();
+            var employees = _oUnitOfWork.employeeRepository.GetAll(x => x.PhoneNo.Contains(phone));
+            if (employees.Count > 0)
+            {
+                foreach (var employee in employees)
+                {
+                    EmployeeViewModel empVM = new EmployeeViewModel();
+
+                    empVM.EmployeeID = employee.EmployeeID;
+                    empVM.Name = employee.Name;
+                    empVM.PhoneNo = employee.PhoneNo;
+                    empVM.Gender = employee.Gender;
+                    empVM.Address = employee.Address;
+                    empVM.EmployeeCode = employee.EmployeeCode;
+                    empVM.Email = employee.Email;
+
+
+                    empVMList.Add(empVM);
+                }
+            }
+            return empVMList;
         }
     }
 }

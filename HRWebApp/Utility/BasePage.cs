@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.UI.WebControls;
+using Utility.Helper;
 
 namespace HRWebApp.Utility
 {
@@ -151,6 +153,19 @@ namespace HRWebApp.Utility
             lblAlertFail.Text = message;
             System.Web.UI.HtmlControls.HtmlGenericControl currdiv = (System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("dvalertFail");
             currdiv.Visible = true;
+        }
+
+        public List<T> SortColumn<T>(List<T> list, string sortExpression,SortDirection sortDirection) where T: class
+        {
+            PropertyInfo property = list.GetType().GetGenericArguments()[0].GetProperty(sortExpression);
+            if (sortDirection == SortDirection.Ascending)
+            {
+                return list.OrderBy(e => property.GetValue(e, null)).ToList<T>();
+            }
+            else
+            {
+                return list.OrderByDescending(e => property.GetValue(e, null)).ToList<T>();
+            }
         }
 
     }

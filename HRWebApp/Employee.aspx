@@ -18,8 +18,8 @@
 
                 </div>
                 <div class="modal-footer">
-                    
-                    <asp:Button ID="btnDeleteConfim" runat="server" Text="Yes" OnClick="btnDeleteConfim_Click" OnClientClick="fnContinue()" CssClass="btn btn-outline-danger"/>
+
+                    <asp:Button ID="btnDeleteConfim" runat="server" Text="Yes" OnClick="btnDeleteConfim_Click" OnClientClick="fnContinue()" CssClass="btn btn-outline-danger" />
                     <button type="button" class="btn btn-outline-success" onclick="fnRevert();">No</button>
                 </div>
             </div>
@@ -35,10 +35,48 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <asp:Button runat="server" ID="btnAdd" CssClass="btn btn-success mb-1" Text="Add" OnClick="btnAdd_Click" />
                 </div>
+
+                <div class="container">
+                    <div class="form-group row">
+                        <label class="col-sm-1 col-form-label">Name</label>
+                        <div class="col-sm-2">
+                            <asp:TextBox ID="txtSearchName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                        </div>
+                        <label class="col-sm-2 col-form-label">Employee Code</label>
+                        <div class="col-sm-2">
+                            <asp:TextBox ID="txtSearchEmpCode" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                        </div>
+                        <label class="col-sm-2 col-form-label">Phone Number</label>
+                        <div class="col-sm-2">
+                            <asp:TextBox ID="txtSearchPhoneNo" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                        </div>
+                         <div class="col-sm-1 text-right">
+                              <asp:Button runat="server" ID="btnSearch" CssClass="btn btn-success mb-1" Text="Search" OnClick="btnSearch_Click" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <%--<div class="table-responsive p-3">
+
+                    <label class="col-sm-1 col-form-label">Name</label>
+                    <div class="col-sm-2">
+                        <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                    </div>
+                    <label class="col-sm-2 col-form-label">Employee Code</label>
+                    <div class="col-sm-2">
+                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                    </div>
+                    <label class="col-sm-2 col-form-label">Phone Number</label>
+                    <div class="col-sm-2">
+                        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+
+                    </div>
+                </div>--%>
                 <div class="table-responsive p-3">
                     <asp:GridView ID="gvEmployee" runat="server" CssClass="table align-items-center table-flush" AutoGenerateColumns="false" EmptyDataText="No Record Found."
-                        PageSize="40" AllowPaging="True" Width="100%" DataKeyNames="EmployeeID" Font-Names="Tahoma"
-                        Font-Size="10pt" EnableModelValidation="True" Visible="true" OnRowCommand="gvEmployee_RowCommand" OnRowDeleting="gvEmployee_RowDeleting">
+                        Width="100%" DataKeyNames="EmployeeID" Font-Names="Tahoma"
+                        Font-Size="10pt" EnableModelValidation="True" Visible="true" OnRowCommand="gvEmployee_RowCommand" OnRowDeleting="gvEmployee_RowDeleting" AllowSorting="True" OnSorting="gvEmployee_Sorting">
                         <PagerSettings Position="TopAndBottom" />
 
                         <Columns>
@@ -52,24 +90,24 @@
                                 <HeaderStyle HorizontalAlign="Left" Width="100px" />
                             </asp:BoundField>--%>
                             <asp:BoundField HeaderText="Employee Name" DataField="Name"
-                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300">
+                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300" SortExpression="Name">
                                 <HeaderStyle HorizontalAlign="Left" Width="200px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Employee Code" DataField="EmployeeCode"
-                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300">
+                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300" SortExpression="EmployeeCode">
                                 <HeaderStyle HorizontalAlign="Left" Width="200px" />
                             </asp:BoundField>
 
                             <asp:BoundField HeaderText="Phone Number" DataField="PhoneNo"
-                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300">
+                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300" SortExpression="PhoneNo">
                                 <HeaderStyle HorizontalAlign="Left" Width="200px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Gender" DataField="Gender"
-                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300">
+                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300" SortExpression="Gender">
                                 <HeaderStyle HorizontalAlign="Left" Width="200px" />
                             </asp:BoundField>
                             <asp:BoundField HeaderText="Address" DataField="Address"
-                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300">
+                                Visible="true" HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300" SortExpression="Address">
                                 <HeaderStyle HorizontalAlign="Left" Width="200px" />
                             </asp:BoundField>
 
@@ -97,6 +135,17 @@
                         <RowStyle HorizontalAlign="Left" VerticalAlign="Top" />
 
                     </asp:GridView>
+                    <asp:Repeater ID="rptPager" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkPage" runat="server"
+                                Text='<%#Eval("Text") %>'
+                                CommandArgument='<%#Eval("Value") %>'
+                                Enabled='<%#Eval("Enabled") %>'
+                                OnClick="Page_Changed"
+                                ForeColor="#267CB2"
+                                Font-Bold="true" />
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
             </div>
         </div>

@@ -19,7 +19,7 @@ namespace DataAccess.Model
         public string PhoneNo { get; set; }
         public string Gender { get; set; }
         public string CreatedBy { get; set; }
-        public Nullable<System.DateTime> CreatedeOn { get; set; }
+        public Nullable<System.DateTime> CreatedOn { get; set; }
         public string UpdatedBy { get; set; }
         public Nullable<System.DateTime> UpdatedOn { get; set; }
         public Nullable<bool> IsActive { get; set; }
