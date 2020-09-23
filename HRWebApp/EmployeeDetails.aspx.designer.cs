@@ -85,6 +85,24 @@ namespace HRWebApp {
         protected global::System.Web.UI.WebControls.RadioButtonList rbtnGender;
         
         /// <summary>
+        /// fileuploadImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fileuploadImage;
+        
+        /// <summary>
+        /// imgEmpPhoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEmpPhoto;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

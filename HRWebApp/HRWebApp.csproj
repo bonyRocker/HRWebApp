@@ -159,6 +159,7 @@
     <Content Include="css\ruang-admin.min.css" />
     <Content Include="Employee.aspx" />
     <Content Include="EmployeeDetails.aspx" />
+    <Content Include="EmployeeImage\blank.jpeg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="font\OFL.txt" />
     <Content Include="img\boy.png" />

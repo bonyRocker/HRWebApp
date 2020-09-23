@@ -155,6 +155,19 @@ namespace HRWebApp.Utility
             currdiv.Visible = true;
         }
 
+        public void HideAlert()
+        {
+            Label lblAlertSuccess = (Label)Master.FindControl("lblAlertSuccess");
+            lblAlertSuccess.Text = string.Empty;
+            System.Web.UI.HtmlControls.HtmlGenericControl currSuccessdiv = (System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("dvalertSuccess");
+            currSuccessdiv.Visible = false;
+
+            Label lblAlertFail = (Label)Master.FindControl("lblAlertFail");
+            lblAlertFail.Text = string.Empty;
+            System.Web.UI.HtmlControls.HtmlGenericControl currFaildiv = (System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("dvalertFail");
+            currFaildiv.Visible = false;
+        }
+
         public List<T> SortColumn<T>(List<T> list, string sortExpression,SortDirection sortDirection) where T: class
         {
             PropertyInfo property = list.GetType().GetGenericArguments()[0].GetProperty(sortExpression);

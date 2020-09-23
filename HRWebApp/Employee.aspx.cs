@@ -22,6 +22,7 @@ namespace HRWebApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            HideAlert();
             if (!IsPostBack)
             {
                 ViewState["CurrentPage"] = 0;
@@ -38,30 +39,12 @@ namespace HRWebApp
             int pageSize = GlobalConstant.PageSize;
             List<EmployeeViewModel> employees = new List<EmployeeViewModel>();
             int totalRecords = 0;
-            if (!string.IsNullOrEmpty(txtSearchName.Text))
-            {
-                employees=_serviceEmployee.GetAllEmployeeByName(txtSearchName.Text);
-                //totalRecords = employees.Count;
-            }
-            else if (!string.IsNullOrEmpty(txtSearchEmpCode.Text))
-            {
-                employees = _serviceEmployee.GetAllEmployeeByEmpCode(txtSearchName.Text);
-                //totalRecords = employees.Count;
-            }
-            else if (!string.IsNullOrEmpty(txtSearchPhoneNo.Text))
-            {
-                employees = _serviceEmployee.GetAllEmployeeByPhoneNo(txtSearchName.Text);
-                //totalRecords = employees.Count;
-            }
-            else
-            {
-                employees = _serviceEmployee.GetAllEmployee(pageNo, pageSize);
-                totalRecords = _serviceEmployee.GetEmployeeCount();
-                BindPager(totalRecords, pageNo, pageSize);
-            }
-             
+
+            employees = _serviceEmployee.GetAllEmployee(pageNo, pageSize);
+            totalRecords = _serviceEmployee.GetEmployeeCount();
+
+
             ViewState["EmployeeList"] = employees;
-             
 
             if (employees != null)
             {
@@ -70,7 +53,7 @@ namespace HRWebApp
                     gvEmployee.DataSource = employees;
                     gvEmployee.DataBind();
 
-                    //BindPager(totalRecords, pageNo, pageSize);
+                    BindPager(totalRecords, pageNo, pageSize);
 
                 }
             }
@@ -128,6 +111,21 @@ namespace HRWebApp
 
         }
 
+        protected void btnDeleteCancel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lblModalMsg.Text = string.Empty;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
         protected void gvEmployee_Sorting(object sender, GridViewSortEventArgs e)
         {
             string sortExpression = e.SortExpression;
@@ -160,18 +158,60 @@ namespace HRWebApp
 
             rptPager.DataSource = pages;
             rptPager.DataBind();
+            lblTotalRecoreds.Text = "Total Records: " + totalRecordCount;
         }
 
         protected void Page_Changed(object sender, EventArgs e)
         {
             int pageIndex = Convert.ToInt32(((sender as LinkButton).CommandArgument));
-            ViewState["CurrentPage"] = pageIndex-1;
+            ViewState["CurrentPage"] = pageIndex - 1;
             LoadEmployeesGv();
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            LoadEmployeesGv();
+            int pageSize = GlobalConstant.PageSize;
+            rptPager.Visible = false;
+
+            List<EmployeeViewModel> employees = new List<EmployeeViewModel>();
+
+            if (!string.IsNullOrEmpty(txtSearchName.Text))
+            {
+                employees = _serviceEmployee.GetAllEmployeeByName(txtSearchName.Text);
+                //totalRecords = employees.Count;
+            }
+            else if (!string.IsNullOrEmpty(txtSearchEmpCode.Text))
+            {
+                employees = _serviceEmployee.GetAllEmployeeByEmpCode(txtSearchEmpCode.Text);
+                //totalRecords = employees.Count;
+            }
+            else if (!string.IsNullOrEmpty(txtSearchPhoneNo.Text))
+            {
+                employees = _serviceEmployee.GetAllEmployeeByPhoneNo(txtSearchPhoneNo.Text);
+                //totalRecords = employees.Count;
+            }
+            else 
+            {
+                LoadEmployeesGv();
+                rptPager.Visible = true;
+                return;
+            }
+
+            ViewState["EmployeeList"] = employees;
+            lblTotalRecoreds.Text = "Total Records: " + employees.Count;
+            if (employees != null)
+            {
+                if (employees.Count > 0)
+                {
+                    gvEmployee.DataSource = employees;
+                }
+                else
+                {
+                    gvEmployee.DataSource = null;
+                }
+                gvEmployee.DataBind();
+            }
+            
         }
 
 

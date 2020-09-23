@@ -16,6 +16,8 @@
     <Property Name="Address" Type="nvarchar" MaxLength="500" />
     <Property Name="EmployeeCode" Type="nvarchar" MaxLength="50" />
     <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhotoByte" Type="varbinary(max)" />
+    <Property Name="PhotoPath" Type="nvarchar(max)" />
   </EntityType>
   <EntityContainer Name="EmployeeModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />

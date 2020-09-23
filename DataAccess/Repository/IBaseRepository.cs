@@ -44,7 +44,7 @@ namespace DataAccess.Repository
             int startRow = pageNo * pageSize;
             if (condition == null)
             {
-                return _context.Set<T>().OrderBy(order).Skip(startRow).Take(pageSize).ToList();
+                return _context.Set<T>().OrderByDescending(order).Skip(startRow).Take(pageSize).ToList();
 
             }
             return _context.Set<T>().Where(condition).OrderBy(order).Skip(startRow).Take(pageSize).ToList();

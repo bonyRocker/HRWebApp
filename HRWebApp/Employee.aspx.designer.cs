@@ -31,6 +31,15 @@ namespace HRWebApp {
         protected global::System.Web.UI.WebControls.Button btnDeleteConfim;
         
         /// <summary>
+        /// btnDeleteCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnDeleteCancel;
+        
+        /// <summary>
         /// hdnEmployeeId control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace HRWebApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSearch;
+        
+        /// <summary>
+        /// lblTotalRecoreds control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalRecoreds;
         
         /// <summary>
         /// gvEmployee control.

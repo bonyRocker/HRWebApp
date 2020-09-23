@@ -337,7 +337,7 @@
 
                         <!-- Alert -->
 
-                        <div id="dvalertSuccess" class="alert alert-primary" role="alert" runat="server" Visible="False" >
+                        <div id="dvalertSuccess" class="alert alert-success" role="alert" runat="server" Visible="False" >
                             <asp:Label ID="lblAlertSuccess" runat="server" Text=""></asp:Label>
                         </div>
                         <div id="dvalertFail" class="alert alert-danger" role="alert"  runat="server" Visible="False">

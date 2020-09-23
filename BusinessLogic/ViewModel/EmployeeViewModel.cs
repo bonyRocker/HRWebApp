@@ -16,5 +16,7 @@ namespace BusinessLogic.ViewModel
         public string Address { get; set; }
         public string EmployeeCode { get; set; }
         public string Email { get; set; }
+        public byte[] PhotoByte { get; set; }
+        public string PhotoPath { get; set; }
     }
 }

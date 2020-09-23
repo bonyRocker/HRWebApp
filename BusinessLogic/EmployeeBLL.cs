@@ -97,6 +97,8 @@ namespace BusinessLogic
                 objEmployee.PhoneNo = empVm.PhoneNo;
                 objEmployee.Address = empVm.Address;
                 objEmployee.Gender = empVm.Gender;
+                objEmployee.PhotoByte = empVm.PhotoByte;
+                objEmployee.PhotoPath = empVm.PhotoPath;
                 objEmployee.CreatedBy = "Admin";
                 objEmployee.CreatedOn = DateTime.Now;
                 objEmployee.IsActive = true;
@@ -127,6 +129,8 @@ namespace BusinessLogic
                     empvm.Address = employee.Address;
                     empvm.EmployeeCode = employee.EmployeeCode;
                     empvm.Email = employee.Email;
+                    empvm.PhotoPath = employee.PhotoPath;
+                    empvm.PhotoByte = employee.PhotoByte;
 
                     return empvm;
                 }
@@ -153,6 +157,8 @@ namespace BusinessLogic
                 objEmployee.Gender = empVm.Gender;
                 objEmployee.UpdatedBy = "Admin";
                 objEmployee.UpdatedOn = DateTime.Now;
+                objEmployee.PhotoByte = empVm.PhotoByte;
+                objEmployee.PhotoPath = empVm.PhotoPath;
 
                 _oUnitOfWork.employeeRepository.Update(objEmployee);
                 _oUnitOfWork.Save();
@@ -193,7 +199,7 @@ namespace BusinessLogic
         public List<EmployeeViewModel> GetAllEmployeeByName(string name)
         {
             List<EmployeeViewModel> empVMList = new List<EmployeeViewModel>();
-            var employees = _oUnitOfWork.employeeRepository.GetAll(x=>x.Name.Contains(name));
+            var employees = _oUnitOfWork.employeeRepository.GetAll(x => x.IsActive==true && x.Name.Contains(name));
             if (employees.Count > 0)
             {
                 foreach (var employee in employees)
@@ -219,7 +225,7 @@ namespace BusinessLogic
         public List<EmployeeViewModel> GetAllEmployeeByEmpCode(string empCode)
         {
             List<EmployeeViewModel> empVMList = new List<EmployeeViewModel>();
-            var employees = _oUnitOfWork.employeeRepository.GetAll(x=>x.EmployeeCode.Contains(empCode));
+            var employees = _oUnitOfWork.employeeRepository.GetAll(x => x.IsActive == true && x.EmployeeCode.Contains(empCode));
             if (employees.Count > 0)
             {
                 foreach (var employee in employees)
@@ -244,7 +250,7 @@ namespace BusinessLogic
         public List<EmployeeViewModel> GetAllEmployeeByPhoneNo(string phone)
         {
             List<EmployeeViewModel> empVMList = new List<EmployeeViewModel>();
-            var employees = _oUnitOfWork.employeeRepository.GetAll(x => x.PhoneNo.Contains(phone));
+            var employees = _oUnitOfWork.employeeRepository.GetAll(x => x.IsActive == true && x.PhoneNo.Contains(phone));
             if (employees.Count > 0)
             {
                 foreach (var employee in employees)

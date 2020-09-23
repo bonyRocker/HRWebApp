@@ -21,6 +21,8 @@
           <Property Name="Address" Type="nvarchar" MaxLength="500" />
           <Property Name="EmployeeCode" Type="nvarchar" MaxLength="50" />
           <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhotoByte" Type="varbinary(max)" />
+          <Property Name="PhotoPath" Type="nvarchar(max)" />
         </EntityType>
         <EntityContainer Name="EmployeeModelStoreContainer">
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
@@ -48,6 +50,8 @@
           <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="EmployeeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhotoByte" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PhotoPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -58,6 +62,8 @@
           <EntitySetMapping Name="Employee">
             <EntityTypeMapping TypeName="EmployeeModel.Employee">
               <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+                <ScalarProperty Name="PhotoByte" ColumnName="PhotoByte" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
                 <ScalarProperty Name="Address" ColumnName="Address" />

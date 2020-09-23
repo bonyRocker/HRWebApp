@@ -19,5 +19,7 @@
     <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="EmployeeCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PhotoByte" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PhotoPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

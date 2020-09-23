@@ -87,6 +87,21 @@
                         </div>
                     </div>
 
+                     <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Photo</label>
+                        <div class="col-sm-5">
+                            <asp:FileUpload ID="fileuploadImage" runat="server"  />
+                           
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-5" >
+                            <asp:Image ID="imgEmpPhoto" runat="server"  Width="200px" Height="150px" ImageUrl="~/EmployeeImage/blank.jpeg" /> <%----%>
+                        </div>
+                    </div>
+
 
                     <div class="form-group row">
                         <div class="col-sm-10">
