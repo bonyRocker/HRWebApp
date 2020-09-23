@@ -37,27 +37,32 @@
                     <asp:Button runat="server" ID="btnAdd" CssClass="btn btn-success mb-1" Text="Add" OnClick="btnAdd_Click" />
                 </div>
 
-                <div class="container">
-                    <div class="form-group row">
-                        <label class="col-sm-1 col-form-label">Name</label>
-                        <div class="col-sm-2">
-                            <asp:TextBox ID="txtSearchName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
-                        </div>
-                        <label class="col-sm-2 col-form-label">Employee Code</label>
-                        <div class="col-sm-2">
-                            <asp:TextBox ID="txtSearchEmpCode" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
-                        </div>
-                        <label class="col-sm-2 col-form-label">Phone Number</label>
-                        <div class="col-sm-2">
-                            <asp:TextBox ID="txtSearchPhoneNo" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
-                        </div>
-                        <div class="col-sm-1 text-right">
-                            <asp:Button runat="server" ID="btnSearch" CssClass="btn btn-success mb-1" Text="Search" OnClick="btnSearch_Click" />
+                <div class="row">
+                    <div class="col-lg-12 ">
+
+                        <div class="form-group form-inline">
+                            <label class="col-sm-1 col-form-label">Name</label>
+                            <div class="col-sm-2">
+                                <asp:TextBox ID="txtSearchName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                            </div>
+                            <label class="col-sm-2 col-form-label">Employee Code</label>
+                            <div class="col-sm-2">
+                                <asp:TextBox ID="txtSearchEmpCode" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                            </div>
+                            <label class="col-sm-2 col-form-label">Phone Number</label>
+                            <div class="col-sm-2">
+                                <asp:TextBox ID="txtSearchPhoneNo" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                            </div>
+                            <div class="col-sm-1">
+                                <asp:Button runat="server" ID="btnSearch" CssClass="btn btn-success mb-1" Text="Search" OnClick="btnSearch_Click" />
+                            </div>
+
                         </div>
                     </div>
-
                 </div>
 
+
+           
                 <%--<div class="table-responsive p-3">
 
                     <label class="col-sm-1 col-form-label">Name</label>
@@ -80,7 +85,7 @@
                         Width="100%" DataKeyNames="EmployeeID" Font-Names="Tahoma"
                         Font-Size="10pt" EnableModelValidation="True" Visible="true" OnRowCommand="gvEmployee_RowCommand" OnRowDeleting="gvEmployee_RowDeleting" AllowSorting="True" OnSorting="gvEmployee_Sorting">
                         <PagerSettings Position="TopAndBottom" />
-                        
+
                         <Columns>
                             <asp:BoundField HeaderText="EmployeeID" DataField="EmployeeID" HeaderStyle-Width="50" Visible="False"
                                 HeaderStyle-HorizontalAlign="Left" ItemStyle-ForeColor="#663300">
