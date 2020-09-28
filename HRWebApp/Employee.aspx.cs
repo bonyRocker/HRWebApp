@@ -152,7 +152,18 @@ namespace HRWebApp
             {
                 for (int i = 1; i <= pageCount; i++)
                 {
-                    pages.Add(new ListItem(i.ToString(), i.ToString(), i != currentPageIndex + 1));
+                    if (i == 1)
+                    {
+                        pages.Add(new ListItem("First", i.ToString(), i != currentPageIndex + 1));
+                    }
+                    else if ( i == pageCount)
+                    {
+                        pages.Add(new ListItem("Last", i.ToString(), i != currentPageIndex + 1));
+                    }
+                    else
+                    {
+                        pages.Add(new ListItem(i.ToString(), i.ToString(), i != currentPageIndex + 1));
+                    }     
                 }
             }
 

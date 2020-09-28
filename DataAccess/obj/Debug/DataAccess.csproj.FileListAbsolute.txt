@@ -18,16 +18,6 @@ G:\Tahmid\Projects\HRWebApp\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 G:\Tahmid\Projects\HRWebApp\DataAccess\obj\Debug\DataAccess.dll
 G:\Tahmid\Projects\HRWebApp\DataAccess\obj\Debug\DataAccess.pdb
 G:\Tahmid\Projects\HRWebApp\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\bin\Debug\DataAccess.dll.config
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\bin\Debug\DataAccess.dll
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\bin\Debug\DataAccess.pdb
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\bin\Debug\EntityFramework.dll
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\bin\Debug\EntityFramework.xml
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\obj\Debug\DataAccess.dll
-D:\C# Practice\HRWebApp\HRWebApp\DataAccess\obj\Debug\DataAccess.pdb
 G:\Tahmid\Projects\HRWebAppGit\HRWebApp\DataAccess\bin\Debug\DataAccess.dll.config
 G:\Tahmid\Projects\HRWebAppGit\HRWebApp\DataAccess\bin\Debug\DataAccess.dll
 G:\Tahmid\Projects\HRWebAppGit\HRWebApp\DataAccess\bin\Debug\DataAccess.pdb

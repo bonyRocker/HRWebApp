@@ -131,7 +131,7 @@
 
         function fnContinue() {
             $('.modal').modal('hide');
-            window.location.href = "Employee.aspx";
+            window.location.href = "EmployeeList.aspx";
 
         }
     </script>

@@ -181,5 +181,18 @@ namespace HRWebApp.Utility
             }
         }
 
+        public static List<T> SortColumns<T>(List<T> list, string sortExpression, SortDirection sortDirection) where T : class
+        {
+            PropertyInfo property = list.GetType().GetGenericArguments()[0].GetProperty(sortExpression);
+            if (sortDirection == SortDirection.Ascending)
+            {
+                return list.OrderBy(e => property.GetValue(e, null)).ToList<T>();
+            }
+            else
+            {
+                return list.OrderByDescending(e => property.GetValue(e, null)).ToList<T>();
+            }
+        }
+
     }
 }

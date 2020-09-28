@@ -11,7 +11,7 @@ namespace HRWebApp
         public static void RegisterRoutes(RouteCollection routes)
         {
             var settings = new FriendlyUrlSettings();
-            settings.AutoRedirectMode = RedirectMode.Permanent;
+            //settings.AutoRedirectMode = RedirectMode.Permanent;//This line commented for loading data in jtable 
             routes.EnableFriendlyUrls(settings);
         }
     }

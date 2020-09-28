@@ -142,6 +142,7 @@
                         <RowStyle HorizontalAlign="Left" VerticalAlign="Top" />
                         <FooterStyle BackColor="#336699" Font-Bold="True" ForeColor="Black" HorizontalAlign="Right" />
                     </asp:GridView>
+                    <%--<asp:LinkButton ID="lnkFirst" runat="server">First</asp:LinkButton>--%>
                     <asp:Repeater ID="rptPager" runat="server">
                         <ItemTemplate>
                             <asp:LinkButton ID="lnkPage" runat="server"
@@ -153,6 +154,7 @@
                                 Font-Bold="true" />
                         </ItemTemplate>
                     </asp:Repeater>
+                    <%--<asp:LinkButton ID="lnkLast" runat="server">Last</asp:LinkButton>--%>
                 </div>
             </div>
         </div>

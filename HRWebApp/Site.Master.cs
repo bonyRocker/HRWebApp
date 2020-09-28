@@ -70,12 +70,12 @@ namespace HRWebApp
         {
             if (Session["CurrentUserId"] == null)
             {
-                Response.Redirect("~/LoginUI.aspx");
+                //Response.Redirect("~/LoginUI.aspx");
             }
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
             Response.Cache.SetExpires(DateTime.UtcNow.AddHours(-1));
             Response.Cache.SetNoStore();
-            lblUserId.Text = Session["CurrentUserId"].ToString();
+            //lblUserId.Text = Session["CurrentUserId"].ToString();
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
