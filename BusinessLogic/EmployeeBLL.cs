@@ -50,13 +50,12 @@ namespace BusinessLogic
 
         }
 
-
         public List<EmployeeViewModel> GetAllEmployee(int pageNo,int pageSize)
         {
             try
             {
                 List<EmployeeViewModel> empVMList = new List<EmployeeViewModel>();
-                var employees = _oUnitOfWork.employeeRepository.GetAllPaging(pageNo,pageSize,x=>x.EmployeeID,x => x.IsActive == true);
+                var employees = _oUnitOfWork.employeeRepository.GetAllWithPagination(pageNo, pageSize, x => x.EmployeeID, x => x.IsActive == true);
                 if (employees.Count > 0)
                 {
                     foreach (var employee in employees)
@@ -270,6 +269,12 @@ namespace BusinessLogic
                 }
             }
             return empVMList;
+        }
+
+        public bool IsEmployeeExist(string empCode)
+        {
+            return _oUnitOfWork.employeeRepository.IsEmployeeExist(empCode, "");
+
         }
     }
 }

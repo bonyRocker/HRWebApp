@@ -21,3 +21,12 @@ G:\Tahmid\Projects\HRWebAppGit\HRWebApp\BusinessLogic\bin\Debug\EntityFramework.
 G:\Tahmid\Projects\HRWebAppGit\HRWebApp\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
 G:\Tahmid\Projects\HRWebAppGit\HRWebApp\BusinessLogic\obj\Debug\BusinessLogic.dll
 G:\Tahmid\Projects\HRWebAppGit\HRWebApp\BusinessLogic\obj\Debug\BusinessLogic.pdb
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\bin\Debug\BusinessLogic.dll
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\bin\Debug\BusinessLogic.pdb
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\bin\Debug\DataAccess.dll
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\bin\Debug\EntityFramework.dll
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\bin\Debug\DataAccess.pdb
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\bin\Debug\EntityFramework.xml
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\obj\Debug\BusinessLogic.dll
+D:\C# Practice\HRWebApp\HRWebApp\BusinessLogic\obj\Debug\BusinessLogic.pdb

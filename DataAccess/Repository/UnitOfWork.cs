@@ -10,14 +10,15 @@ namespace DataAccess.Repository
 {
     public class UnitOfWork : IDisposable
     {
-        private bool _disposed = false;
         private readonly EmployeeEntities _context;
-        private TransactionScope Transaction;
+        private TransactionScope _transaction;
+        private bool _disposed = false;
+
         private EmployeeRepository _employeeRepository;
 
         public UnitOfWork()
         {
-            _context= new EmployeeEntities();
+            _context = new EmployeeEntities();
         }
 
 
@@ -27,7 +28,7 @@ namespace DataAccess.Repository
         {
             get
             {
-                return _employeeRepository == null ? new EmployeeRepository(_context) : _employeeRepository;              
+                return _employeeRepository == null ? new EmployeeRepository(_context) : _employeeRepository;
             }
         }
 
@@ -38,16 +39,16 @@ namespace DataAccess.Repository
 
         public void BeginTrnsaction()
         {
-            if (Transaction == null)
-                Transaction = new TransactionScope();
+            if (_transaction == null)
+                _transaction = new TransactionScope();
         }
         public void CommitTransaction()
         {
-            if (Transaction != null)
+            if (_transaction != null)
             {
-                Transaction.Complete();
-                this.Transaction.Dispose();
-                this.Transaction = null;
+                _transaction.Complete();
+                _transaction.Dispose();
+                _transaction = null;
             }
         }
         public void Save()
@@ -57,6 +58,7 @@ namespace DataAccess.Repository
 
         #endregion
 
+        #region GarbageCollction
         public void Dispose()
         {
             Dispose(true);
@@ -78,6 +80,6 @@ namespace DataAccess.Repository
 
             _disposed = true;
         }
-
+        #endregion
     }
 }

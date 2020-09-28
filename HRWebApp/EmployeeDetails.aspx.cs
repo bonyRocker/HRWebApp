@@ -13,24 +13,32 @@ namespace HRWebApp
 {
     public partial class EmployeeDetails : BasePage
     {
-        readonly EmployeeBLL _serviceEmployee = new EmployeeBLL();
+        private readonly EmployeeBLL _serviceEmployee = new EmployeeBLL();
         private long _employeeId;
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = false;
+           
+
             if (!IsPostBack)
             {
+                try
+                {
+                    string employeeId = Request.QueryString["employeeId"];
+                    if (employeeId != null)
+                    {
+                        _employeeId = Convert.ToInt64(employeeId);
+                        PopulateData();
+                    }
+                    else
+                    {
+                        btnSave.Enabled = true;
+                        btnUpdate.Enabled = false;
+                    }
 
-                string Id = Request.QueryString["employeeId"];
-                if (Id != null)
-                {
-                    _employeeId = Convert.ToInt64(Id);
-                    PopulateData();
                 }
-                else
+                catch (Exception ex)
                 {
-                    btnSave.Enabled = true;
+
                 }
 
             }
@@ -38,72 +46,85 @@ namespace HRWebApp
 
         private void PopulateData()
         {
-            var emp = _serviceEmployee.GetEmployeeById(_employeeId);
-            if (emp == null)
+            try
             {
-                return;
+                var employee = _serviceEmployee.GetEmployeeById(_employeeId);
+                if (employee == null)
+                {
+                    return;
+                }
+                txtName.Text = employee.Name;
+                txtEmployeeCode.Text = employee.EmployeeCode;
+                txtPhoneNo.Text = employee.PhoneNo;
+                txtAddress.Text = employee.Address;
+                txtEmail.Text = employee.Email;
+                rbtnGender.SelectedValue = employee.Gender;
+                hdnEmployeeId.Value = employee.EmployeeID.ToString();
+                if (employee.PhotoByte != null)
+                {
+                    imgEmpPhoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])employee.PhotoByte);
+                }
+
+                btnSave.Enabled = false;
+                btnUpdate.Enabled = true;
             }
-            txtName.Text = emp.Name;
-            txtEmployeeCode.Text = emp.EmployeeCode;
-            txtPhoneNo.Text = emp.PhoneNo;
-            txtAddress.Text = emp.Address;
-            txtEmail.Text = emp.Email;
-            rbtnGender.SelectedValue = emp.Gender;
-            hdnEmployeeId.Value = emp.EmployeeID.ToString();
-            if (emp.PhotoByte != null)
+            catch (Exception ex)
             {
-                imgEmpPhoto.ImageUrl = "data:image/jpg;base64," + Convert.ToBase64String((byte[])emp.PhotoByte);
+
             }
-            
-            btnSave.Enabled = false;
-            btnUpdate.Enabled = true;
+
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-
-                EmployeeViewModel empVm = new EmployeeViewModel();
-
-                empVm.Name = txtName.Text;
-                empVm.EmployeeCode = txtEmployeeCode.Text;
-                empVm.PhoneNo = txtPhoneNo.Text;
-                empVm.Email = txtEmail.Text;
-                empVm.Address = txtAddress.Text;
-                empVm.Gender = rbtnGender.SelectedValue;
-
-                if (fileuploadImage.HasFile)
+                lblModalMsg.Text = string.Empty;
+                if (ValidateEmployeeInsert())
                 {
-                    string uploadFolder = Request.PhysicalApplicationPath + "EmployeeImage\\";
-                    string extension = Path.GetExtension(fileuploadImage.PostedFile.FileName);
-                    var filename = txtEmployeeCode.Text + extension;
-                    var fullpath = uploadFolder + filename;
-                    fileuploadImage.SaveAs(uploadFolder + filename);
 
-                    using (Stream fs = fileuploadImage.PostedFile.InputStream)
+                    EmployeeViewModel oEmpVm = new EmployeeViewModel();
+
+                    oEmpVm.Name = txtName.Text;
+                    oEmpVm.EmployeeCode = txtEmployeeCode.Text;
+                    oEmpVm.PhoneNo = txtPhoneNo.Text;
+                    oEmpVm.Email = txtEmail.Text;
+                    oEmpVm.Address = txtAddress.Text;
+                    oEmpVm.Gender = rbtnGender.SelectedValue;
+
+                    if (fileuploadImage.HasFile)
                     {
-                        using (BinaryReader br = new BinaryReader(fs))
+                        string uploadFolder = Request.PhysicalApplicationPath + "EmployeeImage\\";
+                        string extension = Path.GetExtension(fileuploadImage.PostedFile.FileName);
+                        var filename = txtEmployeeCode.Text + extension;
+                        var fullpath = uploadFolder + filename;
+                        fileuploadImage.SaveAs(uploadFolder + filename);
+
+                        using (Stream fs = fileuploadImage.PostedFile.InputStream)
                         {
-                            byte[] image = br.ReadBytes((Int32)fs.Length);
+                            using (BinaryReader br = new BinaryReader(fs))
+                            {
+                                byte[] image = br.ReadBytes((Int32)fs.Length);
 
-                           // byte[] image = fileuploadImage.FileBytes;
-                            empVm.PhotoByte = image;
-                            empVm.PhotoPath = fullpath;
+                                // byte[] image = fileuploadImage.FileBytes;
+                                oEmpVm.PhotoByte = image;
+                                oEmpVm.PhotoPath = fullpath;
 
+                            }
                         }
+
+                    }
+
+
+                    string msg = _serviceEmployee.InsertEmployee(oEmpVm);
+
+                    if (msg == "success")
+                    {
+                        lblModalMsg.Text = "Data Saved Successfully";
                     }
 
                 }
-
-
-                string msg = _serviceEmployee.InsertEmployee(empVm);
-
-                if (msg == "success")
-                {
-                    lblModalMsg.Text = "Data Saved Successfully";
-                }
-
+                
             }
             catch (Exception ex)
             {
@@ -111,6 +132,27 @@ namespace HRWebApp
                 throw ex;
             }
 
+        }
+
+        private bool ValidateEmployeeInsert()
+        {
+            lblModalMsg.Text = string.Empty;
+            if (string.IsNullOrEmpty(txtName.Text))
+            {
+                SetErrorMessageWithDismiss("Employee Name Is Required");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtEmployeeCode.Text))
+            {
+                SetErrorMessageWithDismiss("Employee Code Is Required");
+                return false;
+            }
+            if(_serviceEmployee.IsEmployeeExist(txtEmployeeCode.Text))
+            {
+                SetErrorMessageWithDismiss("Employee Code Already Exist");
+                return false;
+            }
+            return true;
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -157,6 +199,11 @@ namespace HRWebApp
                 }
 
             }
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EmployeeList.aspx");
         }
     }
 }

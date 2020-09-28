@@ -25,6 +25,31 @@
         </div>
     </div>
     <!-- Modal Center -->
+
+
+    <!-- Modal Center -->
+    <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorModalTitle">Message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <asp:Label ID="lblErrorModal" runat="server" Text=""></asp:Label>
+
+                </div>
+                <div class="modal-footer">
+                    <%-- <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>--%>
+                    <button type="button" class="btn btn-outline-primary" onclick="fnErrorContinue();">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Center -->
+
     <div class="row">
 
         <div class="col-lg-12">
@@ -34,6 +59,9 @@
             <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary">Employee Form</h6>
+                </div>
+                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <asp:Button ID="btnBack" runat="server" Text="Back" CssClass="btn btn-info" OnClick="btnBack_Click" />
                 </div>
                 <div class="card-body">
                     <asp:HiddenField ID="hdnEmployeeId" runat="server" />
@@ -123,15 +151,28 @@
             if ($('#MainContent_lblModalMsg').text() != "") {
                 ShowModal();
             }
+
+            if ($('#MainContent_lblErrorModal').text() != "") {
+                ShowErrorModal();
+            }
         });
 
         function ShowModal() {
-            $('.modal').modal('show');
+            $('#exampleModalCenter').modal('show');
         }
 
         function fnContinue() {
-            $('.modal').modal('hide');
+            $('#exampleModalCenter').modal('hide');
             window.location.href = "EmployeeList.aspx";
+
+        }
+
+        function ShowErrorModal() {
+            $('#errorModal').modal('show');
+        }
+
+        function fnErrorContinue() {
+            $('#errorModal').modal('hide');
 
         }
     </script>

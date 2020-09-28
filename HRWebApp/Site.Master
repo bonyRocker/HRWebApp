@@ -306,6 +306,20 @@
                         <div id="dvalertFail" class="alert alert-danger" role="alert" runat="server" visible="False">
                             <asp:Label ID="lblAlertFail" runat="server" Text=""></asp:Label>
                         </div>
+                        <div id="dvalertDismissFail" class="alert alert-danger alert-dismissible" role="alert" runat="server" visible="False">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <asp:Label ID="lblAlertDismisFail" runat="server" Text=""></asp:Label>
+                 
+                        </div>
+                         <div id="dvalertDismissSuccess" class="alert alert-success alert-dismissible" role="alert" runat="server" visible="False">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <asp:Label ID="lblAlertDismisSuccess" runat="server" Text=""></asp:Label>
+                 
+                        </div>
                         <!-- Alert -->
 
                         <%--<div class="row mb-3">--%>

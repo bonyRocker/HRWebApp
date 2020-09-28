@@ -155,6 +155,21 @@ namespace HRWebApp.Utility
             currdiv.Visible = true;
         }
 
+        public void SetSuccessMessageWithDismiss(string message)
+        {
+            Label lblAlertSuccess = (Label)Master.FindControl("lblAlertDismisSuccess");
+            lblAlertSuccess.Text = message;
+            System.Web.UI.HtmlControls.HtmlGenericControl currdiv = (System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("dvalertDismissSuccess");
+            currdiv.Visible = true;
+        }
+        public void SetErrorMessageWithDismiss(string message)
+        {
+            Label lblAlertFail = (Label)Master.FindControl("lblAlertDismisFail");
+            lblAlertFail.Text = message;
+            System.Web.UI.HtmlControls.HtmlGenericControl currdiv = (System.Web.UI.HtmlControls.HtmlGenericControl)Master.FindControl("dvalertDismissFail");
+            currdiv.Visible = true;
+        }
+
         public void HideAlert()
         {
             Label lblAlertSuccess = (Label)Master.FindControl("lblAlertSuccess");

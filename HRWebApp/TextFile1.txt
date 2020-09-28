@@ -22,3 +22,8 @@
                         </div>
                     </div>
                 </div>
+
+
+	1. All private variable should be named with prefix underscore. _unitOfWork.
+	2. Class object naming should be oClassShortName or oClassShortNameList
+	3. return value var type name should be className or classNameList

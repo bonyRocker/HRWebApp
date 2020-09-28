@@ -13,8 +13,9 @@ namespace DataAccess.Repository
     {
 
         List<T> GetAll(Expression<Func<T, bool>> expression = null);
-        List<T> GetAllPaging(int pageNo, int pageSize, Expression<Func<T, long>> order, Expression<Func<T, bool>> condition = null);
+        List<T> GetAllWithPagination(int pageNo, int pageSize, Expression<Func<T, long>> order, Expression<Func<T, bool>> condition = null);
         T GetSingle(Expression<Func<T, bool>> expression = null);
+        int GetCount(Expression<Func<T, bool>> expression = null);
         void Insert(T entry);
         void Update(T entry);
         void Delete(T entry);
@@ -39,7 +40,7 @@ namespace DataAccess.Repository
             return  _context.Set<T>().Where(expression).ToList();
         }
 
-        public List<T> GetAllPaging(int pageNo, int pageSize, Expression<Func<T, long>> order, Expression<Func<T, bool>> condition = null)
+        public List<T> GetAllWithPagination(int pageNo, int pageSize, Expression<Func<T, long>> order, Expression<Func<T, bool>> condition = null)
         {
             int startRow = pageNo * pageSize;
             if (condition == null)

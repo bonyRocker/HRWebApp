@@ -14,5 +14,15 @@ namespace DataAccess.Repository
         {
             _context = new EmployeeEntities();
         }
+
+        public bool IsEmployeeExist(string empcode,string ssn)
+        {
+            var employee=_context.Employee.FirstOrDefault(x => x.EmployeeCode == empcode);
+            if (employee==null )
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
