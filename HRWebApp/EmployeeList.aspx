@@ -187,7 +187,7 @@
         }
 
         function EditPage(empid) {
-
+            alert(empid);
             var employeeId = empid;
             $.ajax({
                 type: "POST",

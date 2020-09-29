@@ -38,7 +38,7 @@ namespace HRWebApp
                 }
                 catch (Exception ex)
                 {
-
+                    SetErrorMessageWithDismiss(ex.Message);
                 }
 
             }
@@ -51,6 +51,9 @@ namespace HRWebApp
                 var employee = _serviceEmployee.GetEmployeeById(_employeeId);
                 if (employee == null)
                 {
+                    SetErrorMessageWithDismiss("No Employee Found ! ! !");
+                    btnSave.Enabled = false;
+                    btnUpdate.Enabled = false;
                     return;
                 }
                 txtName.Text = employee.Name;
@@ -70,7 +73,7 @@ namespace HRWebApp
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
 
         }
