@@ -35,7 +35,7 @@
                                         </div>
                                         <hr>
                                         <div class="text-center">
-                                            <img src="img/makasoft.png" alt="makasoft" width="400" height="100" />
+                                          <%--  <img src="img/makasoft.png" alt="makasoft" width="400" height="100" />--%>
                                         </div>
                                         <hr>
                                          <div id="alertLogin" class="alert alert-danger" role="alert" runat="server" Visible="False">

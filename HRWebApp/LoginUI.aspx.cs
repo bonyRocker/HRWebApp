@@ -20,7 +20,7 @@ namespace HRWebApp
             alertLogin.Visible = false;
             if (!(string.IsNullOrEmpty(txtUserId.Text) || string.IsNullOrEmpty(txtPassword.Text)))
             {
-                if (txtUserId.Text == "makasoft" && txtPassword.Text == "makasoft")
+                if (txtUserId.Text == "pngsoft" && txtPassword.Text == "pngsoft")
                 {
                     Session["CurrentUserId"] = txtUserId.Text;
                     Session["CurrentUserName"] = txtUserId.Text;

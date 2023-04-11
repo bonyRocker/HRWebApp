@@ -39,22 +39,22 @@
             <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                     <div class="sidebar-brand-icon">
-                        <img src="img/makasoft.png" alt="makasoft" width="50" height="20" />
+                        <%--<img src="img/makasoft.png" alt="makasoft" width="50" height="20" />--%>
                     </div>
-                    <div class="sidebar-brand-text mx-3">Makasoft</div>
+                    <div class="sidebar-brand-text mx-3">PNGSOFT</div>
                 </a>
                 <hr class="sidebar-divider my-0">
-                <li class="nav-item">
+                <%--<li class="nav-item">
                     <a class="nav-link" href="Default.aspx">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
-                </li>
+                </li>--%>
                 <%--  <hr class="sidebar-divider">--%>
                 <%--<div class="sidebar-heading">
                     Features
      
                 </div>--%>
-                <li class="nav-item">
+                <%--<li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
                         aria-expanded="true" aria-controls="collapseBootstrap">
                         <i class="far fa-fw fa-window-maximize"></i>
@@ -66,19 +66,20 @@
                             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="#" CssClass="collapse-item" OnClientClick="addactiveclass()">HyperLink</asp:HyperLink>
                         </div>
                     </div>
-                </li>
+                </li>--%>
                 <li class="nav-item">
-                    <a class="nav-link" href="ui-colors.html">
+                 
+                     <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="JournalEntryList.aspx" CssClass="nav-link">
                         <i class="fas fa-fw fa-palette"></i>
-                        <span>UI Colors</span>
-                    </a>
+                        <span>Journal Entry</span>
+                    </asp:HyperLink>
                 </li>
-                <li class="nav-item">
+               <%-- <li class="nav-item">
                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="About.aspx" CssClass="nav-link">
                         <i class="fas fa-fw fa-palette"></i>
                         <span>HyperLink 1</span>
                     </asp:HyperLink>
-                </li>
+                </li>--%>
 
             </ul>
             <!-- Sidebar -->
